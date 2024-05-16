@@ -1,26 +1,19 @@
 <?php
 include("conexion.php");
 
-if(isset($_POST['nombre']) && isset($_POST['empresa']) && isset($_POST['fecha'])) {
-
-    // Obtener los datos del código QR
-    $nombre = $_POST['nombre'];
-    $empresa = $_POST['empresa'];
-    $fecha = $_POST['fecha'];
+// Verifica si se recibieron los datos esperados
+if(isset($_POST['nombre']) && isset($_POST['correo']) && isset($_POST['empresa'])) {
 
     
-    $escaneo = $POST[$consulta];
+    $nombre = $_POST['nombre'];
+    $correo = $_POST['correo'];
+    $empresa = $_POST['empresa'];
 
-    if($encaneo->execute()) {
-        $consulta = $conex->prepare("INSERT INTO asistencia (nombre, empresa, fecha) VALUES (?, ?, ?)");
-        $consulta->bind_param("sss", $nombre, $empresa, $fecha);
+    // Preparar la consulta SQL para insertar los datos en la tabla 'asistencia'
+    $consulta = $conex->prepare("INSERT INTO asistencia (nombre, correo, empresa) VALUES (?, ?, ?)");
+    $consulta->bind_param("sss", $nombre, $correo, $empresa);
 
-    } else {
-        echo "Error al guardar la asistencia en la base de datos";
-    }
-
-
-
+    // Ejecutar la consulta SQL
     if($consulta->execute()) {
         echo "Datos de asistencia guardados correctamente.";
     } else {

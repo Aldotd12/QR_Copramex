@@ -7,8 +7,8 @@
 <body>
 <img src="./recursos/logo400d.png" alt="Descripción de la imagen" class="imagen-derecha">
 
-<?php
 
+<?php
 if(isset($_GET['nombre']) && isset($_GET['correo']) && isset($_GET['empresa']) && isset($_GET['fecha']) && isset($_GET['qr'])) {
     
     $nombre = $_GET['nombre'];

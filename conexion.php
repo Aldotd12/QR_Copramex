@@ -7,4 +7,5 @@
 
     //CONEXION A LA BASE DE DATOS...
     $conex = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+
 ?>
