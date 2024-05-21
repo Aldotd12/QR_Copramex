@@ -6,7 +6,7 @@
         $nombre = $_POST['nombre'];
         $correo = $_POST['correo'];
         $empresa = $_POST['empresa'];
-        $fecha = date("y/m/d");
+        $fecha = date("d/m/y");
 
         if(strlen($nombre) >= 1 && strlen($correo) >= 1 && strlen($empresa) >= 1) {
 
