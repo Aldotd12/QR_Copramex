@@ -27,7 +27,7 @@
                 exit;
 
 
-                //Posbles errores de inserción de los datos o campos vacios en el formulario..
+                //Posibles errores de inserción de los datos o campos vacios en el formulario..
             } else {
                 ?>
                 <h3 class="error">Ocurrió un error al guardar los datos</h3>
